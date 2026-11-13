@@ -38,9 +38,8 @@ def parse(content: bytes) -> list[tuple[date, Decimal]]:
             continue
         try:
             period = datetime.strptime(row[0], "%d-%b-%Y").date()
-            if len(row) <= index:
-                raise ValueError("Truncated observation row")
-            raw = row[index].strip()
+            # RBA omits trailing empty columns outside a series availability period.
+            raw = row[index].strip() if len(row) > index else ""
             if not raw:
                 continue
             value = Decimal(raw)
