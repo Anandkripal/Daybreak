@@ -1,0 +1,17 @@
+# Roadmap
+
+Requirements and exit criteria are defined in [guidlines.md](../guidlines.md). Status reflects verified work, not intended scope.
+
+| Milestone | Status | Dependency / next evidence |
+| --- | --- | --- |
+| M1 Foundation & contracts | In progress | [Issue #1](https://github.com/Anandkripal/Daybreak/issues/1): fresh clone, two communicating services, database migration, tests, CI and independent review |
+| M2 Real data & advanced SQL | Planned | M1; [source and warehouse plan](https://github.com/Anandkripal/Daybreak/issues/2) |
+| M3 Financial KPIs & scenarios | Planned | M2 |
+| M4 Assistance journey | Planned | M1 |
+| M5 Tableau, Excel & reporting | Planned | M3 |
+| M6 Financial ML | Planned | M3 |
+| M7 Grounded AI & action workflows | Planned | M4, M6 |
+| M8 Security, accessibility & deployment | Planned | Functional product flows |
+| M9 Pilot & portfolio | Planned | M8 |
+
+No live assistance or financial data integration is claimed in M1.
