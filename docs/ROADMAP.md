@@ -9,7 +9,7 @@ Requirements and exit criteria are defined in [guidlines.md](../guidlines.md). S
 | M3 Financial KPIs & scenarios | Planned | M2 |
 | M4 Assistance journey | Planned | M1 |
 | M5 Tableau, Excel & reporting | Planned | M3 |
-| M6 Financial ML | Planned | M3 |
+| M6 Financial ML | In progress | Historical baseline evaluation and leakage checks verified; broader modelling remains dependent on M3 |
 | M7 Grounded AI & action workflows | Planned | M4, M6 |
 | M8 Security, accessibility & deployment | Planned | Functional product flows |
 | M9 Pilot & portfolio | Planned | M8 |
