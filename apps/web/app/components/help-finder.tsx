@@ -1,9 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { sourceFreshness } from "../../lib/journey";
+import { useState, useEffect } from "react";
 import { findStartingPoints, type Need, type Region } from "../../lib/finder";
 
 export function HelpFinder() {
+  const [today, setToday] = useState<Date | null>(null);
+  useEffect(() => {
+    const initial = setTimeout(() => setToday(new Date()), 0);
+    const refresh = setInterval(() => setToday(new Date()), 60_000);
+    return () => { clearTimeout(initial); clearInterval(refresh); };
+  }, []);
   const [need, setNeed] = useState<Need>("all");
   const [region, setRegion] = useState<Region>("unknown");
   const results = findStartingPoints(need, region);
@@ -28,7 +35,7 @@ export function HelpFinder() {
       <ul className="mt-4 grid gap-4 sm:grid-cols-2">
         {results.map((link) => <li key={link.id} className="rounded-xl border border-slate-300 bg-white p-6">
           <h3 className="text-xl font-semibold text-slate-950"><a href={link.url} className="underline decoration-teal-700 underline-offset-4">{link.title}</a></h3>
-          <p className="mt-3 leading-7 text-slate-700">{link.description}</p>
+          <p className="mt-3 leading-7 text-slate-700">{today && sourceFreshness(link.checked, today) === "recent" ? link.description : "Check the official source for current details. This link needs a freshness review."}</p>
           <p className="mt-4 text-sm text-slate-600">{link.source} · {link.scope} · Link checked {link.checked}</p>
         </li>)}
       </ul>
