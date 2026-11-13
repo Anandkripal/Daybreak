@@ -43,13 +43,34 @@ def test_postgres_snapshots_and_revisions():
             assert c.execute(text("SELECT count(*) FROM public_analytics.snapshot")).scalar_one() == 2
             result = c.execute(text("SELECT value, change_pp FROM public_analytics.latest_rate ORDER BY period")).all()
             assert result == [(Decimal("5"), None), (Decimal("7"), Decimal("2"))]
+            from daybreak_api.reconciliation import REVISION_SQL
+            audit = c.execute(text(REVISION_SQL)).mappings().all()
+            assert [r["status"] for r in audit] == ["unchanged", "changed"]
+            assert audit[1]["current_value"] - audit[1]["previous_value"] == Decimal("1")
         reduced = sample().replace(b"29-Feb-2024,6.00\n", b"")
         ingest(engine, reduced, datetime(2024, 5, 1, tzinfo=timezone.utc))
         with engine.connect() as c:
             assert c.execute(text("SELECT count(*) FROM public_analytics.latest_rate")).scalar_one() == 1
+            assert [r.status for r in c.execute(text(REVISION_SQL))] == ["unchanged", "removed"]
         ingest(engine, sample(), datetime(2024, 6, 1, tzinfo=timezone.utc))
         with engine.connect() as c:
             assert c.execute(text("SELECT value FROM public_analytics.latest_rate ORDER BY period DESC LIMIT 1")).scalar_one() == Decimal("6")
     finally:
         engine.dispose()
         command.downgrade(Config("alembic.ini"), "base")
+
+
+@pytest.mark.parametrize("content", [
+    sample() + b"01-Feb-2024,7\n",
+    sample() + b"31-Mar-2024\n",
+    sample() + b"Units,Per cent per annum\n",
+    sample().replace(b"Series ID,FILRSAVR", b"Series ID,FILRSAVR,FILRSAVR"),
+])
+def test_rejects_ambiguous_or_truncated_source(content):
+    with pytest.raises(ValueError):
+        parse(content)
+
+
+def test_retrieval_requires_timezone():
+    with pytest.raises(ValueError, match="timezone"):
+        ingest(None, sample(), datetime(2024, 3, 1))
