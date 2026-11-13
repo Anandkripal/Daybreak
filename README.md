@@ -37,4 +37,4 @@ Open http://localhost:3000. The web server calls the API at http://localhost:800
 
 ## Checks
 
-For API lint, types and tests see [API setup](apps/api/README.md). Its PostgreSQL integration test **downgrades the database** and must only target a disposable empty database. For web lint, types, tests and build see [web setup](apps/web/README.md). CI runs these checks with a disposable PostgreSQL service. Hosted CI and a full accessibility audit remain subject to verification; consult the [M1 task note](docs/milestones/m1-task.md) for the gate.
+For API lint, types and tests see [API setup](apps/api/README.md). Its PostgreSQL integration test **downgrades the database** and must only target a disposable empty database. For web lint, types, tests and build see [web setup](apps/web/README.md). CI runs these checks with a disposable PostgreSQL service. Hosted CI passes for the documented commits; manual accessibility verification remains outstanding; consult the [M1 task note](docs/milestones/m1-task.md) for the gate.
