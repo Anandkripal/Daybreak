@@ -1,6 +1,6 @@
 # Daybreak
 
-Daybreak is an Australia-first financial wellbeing and community assistance project. This early foundation shows service health; it does not yet offer assistance search, financial advice, accounts or AI. See the [roadmap](docs/ROADMAP.md) and [engineering guidelines](guidlines.md).
+Daybreak is an Australia-first financial wellbeing and community assistance project. The first help page links to external assistance starting points. It does not yet offer integrated service search, financial advice, accounts or AI. See the [roadmap](docs/ROADMAP.md) and [engineering guidelines](guidlines.md).
 
 ## Local setup
 
@@ -33,7 +33,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. The web server calls the API at http://localhost:8000 by default; see [web setup](apps/web/README.md) to configure it. API `/health` reports process health and `/ready` checks the database connection. The example migration contains only synthetic category labels, not real service listings.
+Open http://localhost:3000. The help page works without the API. The web server health endpoint is separate; see [web setup](apps/web/README.md) for API configuration. API `/health` reports process health and `/ready` checks the database connection. The example migration contains only synthetic category labels, not real service listings.
 
 ## Checks
 

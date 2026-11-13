@@ -1,0 +1,5 @@
+# M4 source-linked starting points
+
+Checked 2026-11-14: [Ask Izzy](https://askizzy.org.au/using-ask-izzy) describes its search for food, housing and other help; [National Debt Helpline](https://ndh.org.au/about-national-debt-helpline/contact-us/) describes its financial counselling contact; [Service NSW Savings Finder](https://www.service.nsw.gov.au/services/savings-finder) provides NSW savings information. Emergency referral: [Triple Zero](https://www.triplezero.gov.au/Documents/Poster%20-%20Triple%20Zero%20-%20ENGLISH.PDF).
+
+These are external link-outs, not API integrations or provider records. We do not infer eligibility or capacity. The date records a source review, not a guarantee that information remains current; review periodically and on reported changes. Third-party sites have their own data practices. The page does not collect a location or hardship details. M4 remains open: location and urgency flows, source freshness handling, empty/error states and accessibility and independent integration review require further work.
