@@ -54,6 +54,9 @@ def ingest(engine, content: bytes, retrieved_at: datetime) -> int:
             (sha256, source_url, retrieved_at) VALUES (:sha, :url, :at)
             ON CONFLICT (sha256) DO NOTHING RETURNING sha256"""),
             {"sha": digest, "url": URL, "at": retrieved_at}).scalar_one_or_none()
+        if not inserted:
+            conn.execute(text("""UPDATE public_analytics.snapshot SET retrieved_at = GREATEST(retrieved_at, :at)
+                WHERE sha256 = :sha"""), {"sha": digest, "at": retrieved_at})
         if inserted:
             conn.execute(text("""INSERT INTO public_analytics.observation
                 (snapshot_sha256, series_id, period, value) VALUES (:sha, :series, :period, :value)"""),

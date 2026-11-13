@@ -47,6 +47,9 @@ def test_postgres_snapshots_and_revisions():
         ingest(engine, reduced, datetime(2024, 5, 1, tzinfo=timezone.utc))
         with engine.connect() as c:
             assert c.execute(text("SELECT count(*) FROM public_analytics.latest_rate")).scalar_one() == 1
+        ingest(engine, sample(), datetime(2024, 6, 1, tzinfo=timezone.utc))
+        with engine.connect() as c:
+            assert c.execute(text("SELECT value FROM public_analytics.latest_rate ORDER BY period DESC LIMIT 1")).scalar_one() == Decimal("6")
     finally:
         engine.dispose()
         command.downgrade(Config("alembic.ini"), "base")
