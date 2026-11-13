@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { supportLinks } from "../lib/support-links";
 
 export default function Home() {
@@ -22,6 +23,11 @@ export default function Home() {
           ))}
         </ul>
         <p className="mt-5 text-sm leading-6 text-slate-700">These links take you to other organisations. Eligibility, opening hours and availability must be confirmed with them; Daybreak does not check live capacity. Their privacy policies apply.</p>
+      </section>
+      <section aria-labelledby="budget-heading" className="mt-12 rounded-xl border border-teal-200 bg-teal-50 p-6">
+        <h2 id="budget-heading" className="text-2xl font-bold text-slate-950">Understand your budget</h2>
+        <p className="mt-3 leading-7 text-slate-700">Compare your monthly income and expenses with a possible change. Your entries stay in your browser.</p>
+        <Link href="/budget" className="mt-4 inline-block font-semibold text-teal-800 underline">Open the budget tool</Link>
       </section>
       <section aria-labelledby="next-heading" className="mt-12 border-t border-slate-300 pt-8">
         <h2 id="next-heading" className="text-2xl font-bold text-slate-950">Before you contact a service</h2>

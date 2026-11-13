@@ -1,6 +1,6 @@
 # Daybreak
 
-Daybreak is an Australia-first financial wellbeing and community assistance project. The first help page links to external assistance starting points. It does not yet offer integrated service search, financial advice, accounts or AI. See the [roadmap](docs/ROADMAP.md) and [engineering guidelines](guidlines.md).
+Daybreak is an Australia-first financial wellbeing and community assistance project. The help page links to external assistance starting points. A browser-only budget tool compares user-entered monthly figures without storing or submitting them. Integrated service search, financial advice, accounts and AI are not implemented. See the [roadmap](docs/ROADMAP.md) and [engineering guidelines](guidlines.md).
 
 ## Local setup
 
