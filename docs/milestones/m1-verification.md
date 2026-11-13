@@ -1,0 +1,28 @@
+# M1 verification and remaining gates
+
+Checked 2026-11-13. M1 is **in progress**, and [PR #5](https://github.com/Anandkripal/Daybreak/pull/5) remains draft. Evidence is scoped to the current foundation and does not establish future product functionality.
+
+| Requirement | Evidence / status |
+| --- | --- |
+| Monorepo and health checks | Web and API are under `apps/`; web and API `/health` return `{"status":"ok"}`. API `/ready` tests a database connection and reports a generic 503 on failure. Agent 0 checked HTTP responses and the page on 2026-11-13. |
+| PostgreSQL, migration and synthetic seed | Agent 0 and independent Agent 7 each ran the API tests against separate disposable PostgreSQL databases: 4 passed, including upgrade, repeated upgrade, two synthetic rows, readiness and downgrade. The seed is not an assistance directory. |
+| CI: lint, tests and typecheck | GitHub Actions [push run 43388563254](https://github.com/Anandkripal/Daybreak/actions/runs/43388563254) and [PR run 43388568564](https://github.com/Anandkripal/Daybreak/actions/runs/43388568564) both succeeded for exact SHA `4b51a71f55150c15989d243aca9e4b87690f7136`, including Node 24, Python 3.12 and PostgreSQL. CI for subsequent changes must also pass. |
+| Environment examples | `apps/web/.env.example` and `apps/api/.env.example` contain local-only example settings, including a development-only database password. |
+| Documented core schemas | The implemented process health contract is in `packages/contracts/health.md`, `/ready` is described in `apps/api/README.md`, and migration `0001` defines the synthetic table. Future assistance and financial schemas are not implemented or claimed. Broader core contract coverage remains to be assessed before M1 closure. |
+| Accessibility baseline | On 2026-11-13 axe-core 4.14.0 in headless Chrome 157, driven by Playwright 1.65.0, found zero violations and zero incomplete results under WCAG 2 A/AA, 2.1 A/AA and 2.2 AA tags in each of four cases: API responding/unavailable at 320px and 1280px. No horizontal overflow was detected. This automated scan is not a WCAG conformance audit. Manual checks below remain open. |
+| Fresh clone | Agent 0 cloned the pushed branch, installed dependencies, migrated a new PostgreSQL database, built the web app and observed the API response in the rendered page. Local Node was 26; the successful hosted run separately used Node 24. |
+| Tests and independent review | Agent 7 independently repeated web lint, typecheck and 6 unit tests, and API lint, typecheck and 4 tests with PostgreSQL. Agent 0 reran web lint, typecheck, 6 tests and production build on 2026-11-13. API tests emitted one upstream deprecation warning. |
+| No secrets | A limited tracked-content pattern scan found no obvious secrets. Example credentials are explicitly local-only. This is not proof that all possible secrets are absent; a full secrets review remains open. |
+| Two communicating services | Agent 0 checked the API's `/health` and `/ready`, web `/health`, and rendered web output with API responding over HTTP, including in the fresh clone. |
+| Architecture and ADR | `docs/ARCHITECTURE.md` and `docs/decisions/0001-foundation.md` document the service boundary and decision. |
+| Verified commit | `4b51a71f55150c15989d243aca9e4b87690f7136` was pushed and the hosted runs above passed. Later changes require their own verified commit and CI. |
+
+## Manual accessibility checks still required
+
+With the real API running and stopped in turn, inspect the page at narrow and desktop widths and at 200% zoom. Confirm readable text, contrast, reflow and status wording. Use keyboard-only navigation and confirm any focusable controls have visible focus; this page currently has no interactive controls. Use a screen reader to check language, landmarks, heading order and status comprehension. Test a second browser and record browser, operating system, assistive technology, steps and results. The automated result does not substitute for these checks or establish WCAG 2.2 AA compliance.
+
+## Dependency issue #6
+
+On 2026-11-13 `npm audit` reported seven moderate entries, all tracing through the development-only `eslint-config-next → typescript-eslint 8.72.2 → @typescript-eslint/typescript-estree → minimatch 10.2.6` chain to [GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249). `npm audit --omit=dev` reported zero vulnerabilities. The advisory describes excessive CPU/memory use when an attacker supplies a crafted glob pattern with the relevant optimization enabled; it does not by itself establish a reachable attack in this application. The current app does not accept user-supplied glob patterns, and the affected chain is used for development linting, not installed production dependencies. Untrusted repository/configuration changes processed by a developer or CI are a residual availability risk; review changes, avoid passing untrusted patterns into lint tooling, and rely on bounded CI jobs. This is a risk reduction, not proof of non-exploitability.
+
+The registry reported `typescript-eslint` 8.72.2 as the latest stable release, requiring `minimatch ^10.2.2`; the advisory identifies 11.0.1 as patched. An `8.72.3` alpha references `^11.0.1`, but an alpha or forced major override is not a supported stable fix. No breaking override was applied. Recheck for a stable upstream release and update within supported ranges, then rerun full/production audits and all web checks. npm also marks ESLint 9.39.5 unsupported; evaluate its supported major separately for compatibility rather than assume a major upgrade is safe. Issue #6 remains open.

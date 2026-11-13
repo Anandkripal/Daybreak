@@ -4,7 +4,7 @@ Requirements and exit criteria are defined in [guidlines.md](../guidlines.md). S
 
 | Milestone | Status | Dependency / next evidence |
 | --- | --- | --- |
-| M1 Foundation & contracts | In progress | [Issue #1](https://github.com/Anandkripal/Daybreak/issues/1): fresh clone, two communicating services, database migration, tests, CI and independent review |
+| M1 Foundation & contracts | In progress | [Issue #1](https://github.com/Anandkripal/Daybreak/issues/1): [verification matrix](milestones/m1-verification.md): manual accessibility, secrets and core-contract review, dependency risk and latest CI |
 | M2 Real data & advanced SQL | Planned | M1; [source and warehouse plan](https://github.com/Anandkripal/Daybreak/issues/2) |
 | M3 Financial KPIs & scenarios | Planned | M2 |
 | M4 Assistance journey | Planned | M1 |
