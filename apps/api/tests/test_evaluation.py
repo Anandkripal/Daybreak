@@ -23,3 +23,28 @@ def test_rejects_insufficient_or_missing_months():
     del rows[3]
     with pytest.raises(ValueError):
         evaluate(rows, 12)
+
+
+@pytest.mark.parametrize("value", ["NaN", "Infinity", "-Infinity", "1e999"])
+def test_rejects_nonfinite_values(value):
+    rows = months(24)
+    rows[0] = (rows[0][0], Decimal(value))
+    with pytest.raises(ValueError, match="finite"):
+        evaluate(rows)
+
+
+@pytest.mark.parametrize("holdout", [True, 1.5, 0, -1])
+def test_rejects_invalid_holdout(holdout):
+    with pytest.raises(ValueError):
+        evaluate(months(24), holdout)
+
+
+def test_future_changes_cannot_alter_earlier_predictions():
+    rows = months(26)
+    original = evaluate(rows)["predictions"]
+    rows[-1] = (rows[-1][0], Decimal("999"))
+    changed = evaluate(rows)["predictions"]
+    assert original[:-1] == changed[:-1]
+    assert original[-1]["naive"] == changed[-1]["naive"]
+    assert original[-1]["seasonal_naive"] == changed[-1]["seasonal_naive"]
+    assert all(row["training_end"] < row["period"] for row in original)
