@@ -62,11 +62,10 @@ def test_postgres_snapshots_and_revisions():
 
 @pytest.mark.parametrize("content", [
     sample() + b"01-Feb-2024,7\n",
-    sample() + b"31-Mar-2024\n",
     sample() + b"Units,Per cent per annum\n",
     sample().replace(b"Series ID,FILRSAVR", b"Series ID,FILRSAVR,FILRSAVR"),
 ])
-def test_rejects_ambiguous_or_truncated_source(content):
+def test_rejects_ambiguous_source(content):
     with pytest.raises(ValueError):
         parse(content)
 
@@ -74,3 +73,7 @@ def test_rejects_ambiguous_or_truncated_source(content):
 def test_retrieval_requires_timezone():
     with pytest.raises(ValueError, match="timezone"):
         ingest(None, sample(), datetime(2024, 3, 1))
+
+
+def test_trailing_unavailable_columns_are_missing_not_zero():
+    assert parse(b"31-Dec-2023\n" + sample() + b"31-Mar-2024\n") == parse(sample())
