@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { supportLinks } from "../lib/support-links";
+import { HelpFinder } from "./components/help-finder";
 
 export default function Home() {
   return (
@@ -12,16 +12,7 @@ export default function Home() {
       </div>
       <section aria-labelledby="help-heading" className="mt-12">
         <h2 id="help-heading" className="text-2xl font-bold text-slate-950">What do you need help with?</h2>
-        <p className="mt-3 text-slate-700">You can search by location on the linked service. Daybreak does not collect your location here.</p>
-        <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-          {supportLinks.map((link) => (
-            <li key={link.id} className="rounded-xl border border-slate-300 bg-white p-6">
-              <h3 className="text-xl font-semibold text-slate-950"><a href={link.url} className="underline decoration-teal-700 underline-offset-4">{link.title}</a></h3>
-              <p className="mt-3 leading-7 text-slate-700">{link.description}</p>
-              <p className="mt-4 text-sm text-slate-600">{link.source} · {link.scope} · Link checked {link.checked}</p>
-            </li>
-          ))}
-        </ul>
+        <HelpFinder />
         <p className="mt-5 text-sm leading-6 text-slate-700">These links take you to other organisations. Eligibility, opening hours and availability must be confirmed with them; Daybreak does not check live capacity. Their privacy policies apply.</p>
       </section>
       <section aria-labelledby="budget-heading" className="mt-12 rounded-xl border border-teal-200 bg-teal-50 p-6">
