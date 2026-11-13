@@ -17,8 +17,15 @@ EXPECTED_SOURCE = "RBA; Securitisation System"
 
 def parse(content: bytes) -> list[tuple[date, Decimal]]:
     rows = list(csv.reader(io.StringIO(content.decode("utf-8-sig"))))
-    metadata = {row[0]: row for row in rows if row and row[0] in {"Series ID", "Source", "Units", "Frequency"}}
+    metadata = {}
+    for row in rows:
+        if row and row[0] in {"Series ID", "Source", "Units", "Frequency"}:
+            if row[0] in metadata:
+                raise ValueError("Duplicate source metadata")
+            metadata[row[0]] = row
     try:
+        if metadata["Series ID"].count(SERIES) != 1:
+            raise ValueError("Expected exactly one selected series")
         index = metadata["Series ID"].index(SERIES)
         if (metadata["Source"][index], metadata["Units"][index], metadata["Frequency"][index]) != (EXPECTED_SOURCE, "Per cent per annum", "Monthly"):
             raise ValueError("Unexpected source metadata")
@@ -31,22 +38,26 @@ def parse(content: bytes) -> list[tuple[date, Decimal]]:
             continue
         try:
             period = datetime.strptime(row[0], "%d-%b-%Y").date()
-            raw = row[index].strip() if len(row) > index else ""
+            if len(row) <= index:
+                raise ValueError("Truncated observation row")
+            raw = row[index].strip()
             if not raw:
                 continue
             value = Decimal(raw)
-            if not value.is_finite() or period in seen:
+            if not value.is_finite() or (period.year, period.month) in seen:
                 raise ValueError("Invalid or duplicate observation")
         except (InvalidOperation, IndexError) as exc:
             raise ValueError("Invalid observation") from exc
-        seen.add(period)
+        seen.add((period.year, period.month))
         found.append((period, value))
     if not found:
         raise ValueError("No observations found")
-    return found
+    return sorted(found)
 
 
 def ingest(engine, content: bytes, retrieved_at: datetime) -> int:
+    if retrieved_at.tzinfo is None or retrieved_at.utcoffset() is None:
+        raise ValueError("Retrieval timestamp must include a timezone")
     observations = parse(content)
     digest = hashlib.sha256(content).hexdigest()
     with engine.begin() as conn:
