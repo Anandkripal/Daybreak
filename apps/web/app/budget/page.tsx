@@ -37,7 +37,8 @@ export default function BudgetPage() {
     <Link href="/" className="text-teal-800 underline">← Back to help</Link>
     <h1 className="mt-6 text-4xl font-bold text-slate-950">Explore your monthly budget</h1>
     <p className="mt-4 leading-7 text-slate-700">Compare your current monthly figures with a possible change. This is a simple estimate, not financial advice or a prediction.</p>
-    <p className="mt-3 leading-7 text-slate-700">Your entries stay in this page’s memory and are cleared when you leave or reload. They are not sent to Daybreak’s server. Do not use a shared device if others can see your screen.</p>
+    <p className="mt-3 leading-7 text-slate-700">Your entries stay in this page session. Browser history may restore the session; use Clear entries to delete them. They are not sent to Daybreak’s server. Do not use a shared device if others can see your screen.</p>
+    <p className="mt-4"><Link className="text-teal-800 underline" href="/transactions">Review a private transaction CSV</Link></p>
     <noscript><p>JavaScript is required to calculate in your browser.</p></noscript>
     <div className="mt-8 space-y-8">
       <fieldset className="space-y-4"><legend className="text-xl font-semibold">Current month</legend>
