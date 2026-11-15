@@ -1,0 +1,13 @@
+# Private CSV cash-flow analysis — issue #19
+
+Owner: Frontend / financial analytics. The `/transactions` page is linked from the budget workspace. It accepts an intentionally narrow UTF-8 CSV contract: `date,kind,amount,currency,recurring`. No bank-specific formats, descriptions, account identifiers or automatic categorisation are supported. Positive income and expense amounts are distinguished by kind. Users identify recurring items and exclude transfers.
+
+Validation is atomic: invalid real-calendar dates, malformed amounts, non-AUD currency, unknown kinds/recurrence, extra columns, repeated normalized transactions, over 5000 rows or files over 1 MB reject the import. Legitimate identical repeats require user review and combination. Input references are cleared after reading; transaction rows are temporary and only monthly aggregates remain in page state. Async generation guards prevent a pending import from repopulating cleared data.
+
+Monthly net = income minus expenses; expense-to-income ratio is undefined at zero income; recurring expenditure sums expense rows marked yes. Integer cents avoid floating-point currency accumulation. Missing months are unknown, not zero, and partial months are not extrapolated. No forecasts, categorisation inference, objective eligibility or personalised financial advice are provided.
+
+The browser sends no file content to an API, telemetry, model, URL or storage. Page history may restore a session; explicit deletion clears figures. A user-triggered CSV export contains only numeric totals and validated months, preventing formula injection. Original files and downloaded exports remain outside application deletion control. Use secure local storage for these private exports.
+
+Validation: web lint, TypeScript, 40 unit tests and production build passed. Astra independently reviewed validation, overflow bounds, formula-injection resistance and stale async handling with no blocking source finding. Automated browser evidence is recorded separately; these checks do not establish manual screen-reader usability or whole-milestone completion.
+
+Automated browser evidence (2026-11-15): Chromium 159 and Playwright WebKit 27.2 passed contact preparation, keyboard activation/focus recovery, JSON export/delete, CSV import/rejection/clear, 390px viewport overflow, empty local/session storage, request sentinel checks and axe WCAG 2/2.1/2.2 A/AA scans (zero violations in tested states). The first scan caught unfocusable horizontal scroll regions; both CSV example and summary now have keyboard focus. Firefox 159 failed to launch with “Could not find profile folder”, including a retry with TMPDIR=/tmp; no Firefox pass is claimed. This is automated engine evidence, not manual Safari/VoiceOver verification.

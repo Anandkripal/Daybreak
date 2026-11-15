@@ -11,3 +11,5 @@ Source checks expire after 30 days. Invalid/future dates also need review. Until
 Tests cover draft uncertainty, export isolation and date boundaries. Manual browser keyboard/mobile/assistive-technology review remains required. M7 as a whole remains incomplete: no AI, multilingual interface or persisted reminders are claimed.
 
 Independent Astra source review identified impossible-date validation, removed-control focus recovery and session-retention wording; all three were corrected. Automated browser review remains pending.
+
+Browser follow-up: Chromium and WebKit automated synthetic journeys verified keyboard activation, deletion focus restoration, JSON export contents, deletion, no sentinel in requests, empty browser storage and zero axe violations. See the M3 CSV evidence for engine versions and Firefox environment failure. PR #18 API and web CI checks passed on 9ac2bea.
