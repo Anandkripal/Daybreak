@@ -1,0 +1,13 @@
+{
+  "source_url": "https://www.rba.gov.au/statistics/tables/csv/f5-data.csv",
+  "source_sha256": "0c6e3b2a7cac7666bdb94769fa93a9e78ceceb5d0663f03b559df1bc2147fc3f",
+  "selected_series": "FILRSAVR",
+  "source": "Reserve Bank of Australia; Securitisation System",
+  "retrieval_checked": "2026-11-14",
+  "unit": "per cent per annum",
+  "frequency": "monthly",
+  "period_start": "2015-06-30",
+  "period_end": "2020-01-31",
+  "copyright_url": "https://www.rba.gov.au/copyright/",
+  "limitations": "Historical revised observations; not current rates. Only RBA-labelled selected observations retained; third-party columns excluded."
+}

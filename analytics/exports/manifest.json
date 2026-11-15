@@ -1,0 +1,44 @@
+{
+  "format_version": 1,
+  "synthetic_definition": "One invented budget and invented aggregate assistance counts, calendar 2025. No actual users or impact claims.",
+  "rba_provenance": {
+    "source_url": "https://www.rba.gov.au/statistics/tables/csv/f5-data.csv",
+    "source_sha256": "0c6e3b2a7cac7666bdb94769fa93a9e78ceceb5d0663f03b559df1bc2147fc3f",
+    "selected_series": "FILRSAVR",
+    "source": "Reserve Bank of Australia; Securitisation System",
+    "retrieval_checked": "2026-11-14",
+    "unit": "per cent per annum",
+    "frequency": "monthly",
+    "period_start": "2015-06-30",
+    "period_end": "2020-01-31",
+    "copyright_url": "https://www.rba.gov.au/copyright/",
+    "limitations": "Historical revised observations; not current rates. Only RBA-labelled selected observations retained; third-party columns excluded."
+  },
+  "files": {
+    "cashflow.csv": {
+      "rows": 48,
+      "sha256": "0c1b92bb6eb9f086150c2c072e06d5d6de17f963c2bea3c7846de771e7878ce2"
+    },
+    "monthly_finance.csv": {
+      "rows": 12,
+      "sha256": "d6ef1020577fc756f6cb3a6ac1b1f37628302d5527dee757cacce5fe9546a073"
+    },
+    "assistance.csv": {
+      "rows": 36,
+      "sha256": "8e183a816ee1d0d05c2521bdd5eff9c1434d74ed7ab353d3be84833001f32c4c"
+    },
+    "rba_rates.csv": {
+      "rows": 56,
+      "sha256": "41783b01d2d72b292b3664658b14f5ca355322b810d5cdd8d24cc0017134f27b"
+    },
+    "quality.csv": {
+      "rows": 5,
+      "sha256": "f2b8fd3240e663221c55fc3c3e190e608be91e779f0bac424c909e207d9db3d7"
+    }
+  },
+  "controls_cents": {
+    "income": 4380000,
+    "expenses": 2538000,
+    "net": 1842000
+  }
+}

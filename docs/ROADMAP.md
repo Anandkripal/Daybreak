@@ -8,7 +8,7 @@ Requirements and exit criteria are defined in [guidlines.md](../guidlines.md). S
 | M2 Real data & advanced SQL | In progress | Validated RBA historical-series ingestion, revision-aware SQL view and tested revision audit export; M1; [source and warehouse plan](https://github.com/Anandkripal/Daybreak/issues/2) |
 | M3 Financial KPIs & scenarios | Planned | M2 |
 | M4 Assistance journey | Planned | M1 |
-| M5 Tableau, Excel & reporting | Planned | M3 |
+| M5 Tableau, Excel & reporting | In progress | [Reproducible analyst package](milestones/m5-analyst-package.md): tested SQL/Excel controls, public/synthetic exports and five Tableau build guides; native desktop verification remains open |
 | M6 Financial ML | In progress | Historical baseline evaluation and leakage checks verified; broader modelling remains dependent on M3 |
 | M7 Grounded AI & action workflows | Planned | M4, M6 |
 | M8 Security, accessibility & deployment | Planned | Functional product flows |

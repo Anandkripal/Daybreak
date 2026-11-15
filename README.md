@@ -1,5 +1,7 @@
 # Daybreak
 
+The [analyst package](analytics/README.md) supplies reproducible synthetic/public CSVs, a verified formula-based Excel artifact, SQL reconciliation and Tableau build instructions. Native Excel/Tableau validation remains open; the samples do not contain real user records or measured assistance outcomes.
+
 Daybreak is an Australia-first financial wellbeing and community assistance project. This early foundation shows service health; it does not yet offer assistance search, financial advice, accounts or AI. See the [roadmap](docs/ROADMAP.md) and [engineering guidelines](guidlines.md).
 
 ## Local setup

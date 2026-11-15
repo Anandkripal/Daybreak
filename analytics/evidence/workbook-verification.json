@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "annual totals",
+    "all 36 SQL differences",
+    "SUMIFS selector",
+    "XLOOKUP selector",
+    "zero-income boundary",
+    "restored inputs"
+  ],
+  "formula_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

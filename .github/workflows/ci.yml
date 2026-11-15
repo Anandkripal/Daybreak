@@ -5,6 +5,16 @@ on:
 permissions:
   contents: read
 jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s analytics/tests -v
+      - run: python analytics/export_bi.py
+      - run: git diff --exit-code -- analytics/exports
   api:
     runs-on: ubuntu-latest
     services:
