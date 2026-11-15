@@ -5,6 +5,16 @@ on:
 permissions:
   contents: read
 jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s analytics/tests -v
+      - run: python analytics/export_bi.py
+      - run: git diff --exit-code -- analytics/exports
   api:
     runs-on: ubuntu-latest
     services:
@@ -54,3 +64,18 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - name: Install Firefox browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/daybreak-browser" --no-save playwright@1.65.1 @axe-core/playwright@4.14.0
+          "$RUNNER_TEMP/daybreak-browser/node_modules/.bin/playwright" install --with-deps firefox
+      - name: Verify private journeys in Firefox
+        env:
+          BROWSER: firefox
+          # Firefox crashes during axe evaluation on this runner. Chromium and WebKit cover axe locally.
+          DAYBREAK_FUNCTIONAL_ONLY: 1
+        run: |
+          node node_modules/next/dist/bin/next start --hostname localhost --port 3027 > "$RUNNER_TEMP/daybreak-web.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          curl --retry 12 --retry-connrefused --retry-delay 1 --fail --silent --show-error http://localhost:3027/health
+          NODE_PATH="$RUNNER_TEMP/daybreak-browser/node_modules" node e2e/private-journey.cjs

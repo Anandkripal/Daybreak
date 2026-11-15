@@ -1,0 +1,1257 @@
+{
+  "cashflow": [
+    {
+      "month": "2025-01-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 310000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-01-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-01-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 61000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-01-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 25000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 320000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 62000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 30000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 330000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 63000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 20000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 340000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 64000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 25000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 350000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 65000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 30000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 360000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 66000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 20000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 370000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 67000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 25000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 380000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 68000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 30000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 390000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 69000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 20000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 400000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 70000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 25000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 410000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 71000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 30000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Take-home income",
+      "kind": "income",
+      "cents": 420000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Housing",
+      "kind": "expense",
+      "cents": 120000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Essentials",
+      "kind": "expense",
+      "cents": 72000,
+      "recurring": 0,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Utilities",
+      "kind": "expense",
+      "cents": 20000,
+      "recurring": 1,
+      "data_class": "synthetic"
+    }
+  ],
+  "monthly_finance": [
+    {
+      "month": "2025-01-01",
+      "income_cents": 310000,
+      "expense_cents": 206000,
+      "recurring_cents": 145000,
+      "net_cents": 104000,
+      "expense_ratio": 0.6645161290322581,
+      "net_change_cents": null,
+      "cumulative_net_cents": 104000,
+      "trailing_3_observation_net_cents": 104000.0
+    },
+    {
+      "month": "2025-02-01",
+      "income_cents": 320000,
+      "expense_cents": 212000,
+      "recurring_cents": 150000,
+      "net_cents": 108000,
+      "expense_ratio": 0.6625,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 212000,
+      "trailing_3_observation_net_cents": 106000.0
+    },
+    {
+      "month": "2025-03-01",
+      "income_cents": 330000,
+      "expense_cents": 203000,
+      "recurring_cents": 140000,
+      "net_cents": 127000,
+      "expense_ratio": 0.6151515151515151,
+      "net_change_cents": 19000,
+      "cumulative_net_cents": 339000,
+      "trailing_3_observation_net_cents": 113000.0
+    },
+    {
+      "month": "2025-04-01",
+      "income_cents": 340000,
+      "expense_cents": 209000,
+      "recurring_cents": 145000,
+      "net_cents": 131000,
+      "expense_ratio": 0.6147058823529412,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 470000,
+      "trailing_3_observation_net_cents": 122000.0
+    },
+    {
+      "month": "2025-05-01",
+      "income_cents": 350000,
+      "expense_cents": 215000,
+      "recurring_cents": 150000,
+      "net_cents": 135000,
+      "expense_ratio": 0.6142857142857143,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 605000,
+      "trailing_3_observation_net_cents": 131000.0
+    },
+    {
+      "month": "2025-06-01",
+      "income_cents": 360000,
+      "expense_cents": 206000,
+      "recurring_cents": 140000,
+      "net_cents": 154000,
+      "expense_ratio": 0.5722222222222222,
+      "net_change_cents": 19000,
+      "cumulative_net_cents": 759000,
+      "trailing_3_observation_net_cents": 140000.0
+    },
+    {
+      "month": "2025-07-01",
+      "income_cents": 370000,
+      "expense_cents": 212000,
+      "recurring_cents": 145000,
+      "net_cents": 158000,
+      "expense_ratio": 0.572972972972973,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 917000,
+      "trailing_3_observation_net_cents": 149000.0
+    },
+    {
+      "month": "2025-08-01",
+      "income_cents": 380000,
+      "expense_cents": 218000,
+      "recurring_cents": 150000,
+      "net_cents": 162000,
+      "expense_ratio": 0.5736842105263158,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 1079000,
+      "trailing_3_observation_net_cents": 158000.0
+    },
+    {
+      "month": "2025-09-01",
+      "income_cents": 390000,
+      "expense_cents": 209000,
+      "recurring_cents": 140000,
+      "net_cents": 181000,
+      "expense_ratio": 0.5358974358974359,
+      "net_change_cents": 19000,
+      "cumulative_net_cents": 1260000,
+      "trailing_3_observation_net_cents": 167000.0
+    },
+    {
+      "month": "2025-10-01",
+      "income_cents": 400000,
+      "expense_cents": 215000,
+      "recurring_cents": 145000,
+      "net_cents": 185000,
+      "expense_ratio": 0.5375,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 1445000,
+      "trailing_3_observation_net_cents": 176000.0
+    },
+    {
+      "month": "2025-11-01",
+      "income_cents": 410000,
+      "expense_cents": 221000,
+      "recurring_cents": 150000,
+      "net_cents": 189000,
+      "expense_ratio": 0.5390243902439025,
+      "net_change_cents": 4000,
+      "cumulative_net_cents": 1634000,
+      "trailing_3_observation_net_cents": 185000.0
+    },
+    {
+      "month": "2025-12-01",
+      "income_cents": 420000,
+      "expense_cents": 212000,
+      "recurring_cents": 140000,
+      "net_cents": 208000,
+      "expense_ratio": 0.5047619047619047,
+      "net_change_cents": 19000,
+      "cumulative_net_cents": 1842000,
+      "trailing_3_observation_net_cents": 194000.0
+    }
+  ],
+  "assistance": [
+    {
+      "month": "2025-01-01",
+      "category": "Food",
+      "contacts": 21,
+      "received_help": 6,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-01-01",
+      "category": "Housing",
+      "contacts": 21,
+      "received_help": 6,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-01-01",
+      "category": "Money",
+      "contacts": 21,
+      "received_help": 6,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Food",
+      "contacts": 22,
+      "received_help": 7,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Housing",
+      "contacts": 22,
+      "received_help": 7,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-02-01",
+      "category": "Money",
+      "contacts": 22,
+      "received_help": 7,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Food",
+      "contacts": 23,
+      "received_help": 8,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Housing",
+      "contacts": 23,
+      "received_help": 8,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-03-01",
+      "category": "Money",
+      "contacts": 23,
+      "received_help": 8,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Food",
+      "contacts": 24,
+      "received_help": 9,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Housing",
+      "contacts": 24,
+      "received_help": 9,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-04-01",
+      "category": "Money",
+      "contacts": 24,
+      "received_help": 9,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Food",
+      "contacts": 25,
+      "received_help": 10,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Housing",
+      "contacts": 25,
+      "received_help": 10,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-05-01",
+      "category": "Money",
+      "contacts": 25,
+      "received_help": 10,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Food",
+      "contacts": 26,
+      "received_help": 11,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Housing",
+      "contacts": 26,
+      "received_help": 11,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-06-01",
+      "category": "Money",
+      "contacts": 26,
+      "received_help": 11,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Food",
+      "contacts": 27,
+      "received_help": 12,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Housing",
+      "contacts": 27,
+      "received_help": 12,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-07-01",
+      "category": "Money",
+      "contacts": 27,
+      "received_help": 12,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Food",
+      "contacts": 28,
+      "received_help": 13,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Housing",
+      "contacts": 28,
+      "received_help": 13,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-08-01",
+      "category": "Money",
+      "contacts": 28,
+      "received_help": 13,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Food",
+      "contacts": 29,
+      "received_help": 14,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Housing",
+      "contacts": 29,
+      "received_help": 14,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-09-01",
+      "category": "Money",
+      "contacts": 29,
+      "received_help": 14,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Food",
+      "contacts": 30,
+      "received_help": 15,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Housing",
+      "contacts": 30,
+      "received_help": 15,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-10-01",
+      "category": "Money",
+      "contacts": 30,
+      "received_help": 15,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Food",
+      "contacts": 31,
+      "received_help": 16,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Housing",
+      "contacts": 31,
+      "received_help": 16,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-11-01",
+      "category": "Money",
+      "contacts": 31,
+      "received_help": 16,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Food",
+      "contacts": 32,
+      "received_help": 17,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Housing",
+      "contacts": 32,
+      "received_help": 17,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    },
+    {
+      "month": "2025-12-01",
+      "category": "Money",
+      "contacts": 32,
+      "received_help": 17,
+      "awaiting_reply": 8,
+      "not_available": 7,
+      "data_class": "synthetic"
+    }
+  ],
+  "rba_rates": [
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-06-30",
+      "rate_percent_pa": "4.64",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-07-31",
+      "rate_percent_pa": "4.64",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-08-31",
+      "rate_percent_pa": "4.69",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-09-30",
+      "rate_percent_pa": "4.73",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-10-31",
+      "rate_percent_pa": "4.72",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-11-30",
+      "rate_percent_pa": "4.87",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2015-12-31",
+      "rate_percent_pa": "4.86",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-01-31",
+      "rate_percent_pa": "4.86",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-02-29",
+      "rate_percent_pa": "4.86",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-03-31",
+      "rate_percent_pa": "4.85",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-04-30",
+      "rate_percent_pa": "4.84",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-05-31",
+      "rate_percent_pa": "4.60",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-06-30",
+      "rate_percent_pa": "4.59",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-07-31",
+      "rate_percent_pa": "4.58",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-08-31",
+      "rate_percent_pa": "4.46",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-09-30",
+      "rate_percent_pa": "4.45",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-10-31",
+      "rate_percent_pa": "4.44",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-11-30",
+      "rate_percent_pa": "4.43",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2016-12-31",
+      "rate_percent_pa": "4.46",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-01-31",
+      "rate_percent_pa": "4.46",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-02-28",
+      "rate_percent_pa": "4.45",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-03-31",
+      "rate_percent_pa": "4.50",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-04-30",
+      "rate_percent_pa": "4.52",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-05-31",
+      "rate_percent_pa": "4.56",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-06-30",
+      "rate_percent_pa": "4.59",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-07-31",
+      "rate_percent_pa": "4.62",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-08-31",
+      "rate_percent_pa": "4.64",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-09-30",
+      "rate_percent_pa": "4.63",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-10-31",
+      "rate_percent_pa": "4.62",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-11-30",
+      "rate_percent_pa": "4.60",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2017-12-31",
+      "rate_percent_pa": "4.58",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-01-31",
+      "rate_percent_pa": "4.57",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-02-28",
+      "rate_percent_pa": "4.56",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-03-31",
+      "rate_percent_pa": "4.55",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-04-30",
+      "rate_percent_pa": "4.54",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-05-31",
+      "rate_percent_pa": "4.52",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-06-30",
+      "rate_percent_pa": "4.51",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-07-31",
+      "rate_percent_pa": "4.51",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-08-31",
+      "rate_percent_pa": "4.50",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-09-30",
+      "rate_percent_pa": "4.56",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-10-31",
+      "rate_percent_pa": "4.58",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-11-30",
+      "rate_percent_pa": "4.57",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2018-12-31",
+      "rate_percent_pa": "4.56",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-01-31",
+      "rate_percent_pa": "4.56",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-02-28",
+      "rate_percent_pa": "4.55",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-03-31",
+      "rate_percent_pa": "4.54",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-04-30",
+      "rate_percent_pa": "4.52",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-05-31",
+      "rate_percent_pa": "4.51",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-06-30",
+      "rate_percent_pa": "4.27",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-07-31",
+      "rate_percent_pa": "4.06",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-08-31",
+      "rate_percent_pa": "4.04",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-09-30",
+      "rate_percent_pa": "4.02",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-10-31",
+      "rate_percent_pa": "3.86",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-11-30",
+      "rate_percent_pa": "3.85",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2019-12-31",
+      "rate_percent_pa": "3.84",
+      "data_class": "public_historical"
+    },
+    {
+      "series_id": "FILRSAVR",
+      "period": "2020-01-31",
+      "rate_percent_pa": "3.82",
+      "data_class": "public_historical"
+    }
+  ],
+  "quality": [
+    {
+      "check": "income_SQL_minus_source_cents",
+      "difference": 0,
+      "expected": 0
+    },
+    {
+      "check": "expense_SQL_minus_source_cents",
+      "difference": 0,
+      "expected": 0
+    },
+    {
+      "check": "net_SQL_minus_source_cents",
+      "difference": 0,
+      "expected": 0
+    },
+    {
+      "check": "missing_synthetic_months",
+      "difference": 0,
+      "expected": 0
+    },
+    {
+      "check": "assistance_unreconciled_outcomes",
+      "difference": 0,
+      "expected": 0
+    }
+  ],
+  "manifest": {
+    "format_version": 1,
+    "synthetic_definition": "One invented budget and invented aggregate assistance counts, calendar 2025. No actual users or impact claims.",
+    "rba_provenance": {
+      "source_url": "https://www.rba.gov.au/statistics/tables/csv/f5-data.csv",
+      "source_sha256": "0c6e3b2a7cac7666bdb94769fa93a9e78ceceb5d0663f03b559df1bc2147fc3f",
+      "selected_series": "FILRSAVR",
+      "source": "Reserve Bank of Australia; Securitisation System",
+      "retrieval_checked": "2026-11-14",
+      "unit": "per cent per annum",
+      "frequency": "monthly",
+      "period_start": "2015-06-30",
+      "period_end": "2020-01-31",
+      "copyright_url": "https://www.rba.gov.au/copyright/",
+      "limitations": "Historical revised observations; not current rates. Only RBA-labelled selected observations retained; third-party columns excluded."
+    },
+    "files": {
+      "cashflow.csv": {
+        "rows": 48,
+        "sha256": "0c1b92bb6eb9f086150c2c072e06d5d6de17f963c2bea3c7846de771e7878ce2"
+      },
+      "monthly_finance.csv": {
+        "rows": 12,
+        "sha256": "d6ef1020577fc756f6cb3a6ac1b1f37628302d5527dee757cacce5fe9546a073"
+      },
+      "assistance.csv": {
+        "rows": 36,
+        "sha256": "8e183a816ee1d0d05c2521bdd5eff9c1434d74ed7ab353d3be84833001f32c4c"
+      },
+      "rba_rates.csv": {
+        "rows": 56,
+        "sha256": "41783b01d2d72b292b3664658b14f5ca355322b810d5cdd8d24cc0017134f27b"
+      },
+      "quality.csv": {
+        "rows": 5,
+        "sha256": "f2b8fd3240e663221c55fc3c3e190e608be91e779f0bac424c909e207d9db3d7"
+      }
+    },
+    "controls_cents": {
+      "income": 4380000,
+      "expenses": 2538000,
+      "net": 1842000
+    }
+  }
+}
