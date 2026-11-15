@@ -11,6 +11,18 @@ export default function Home() {
       <div className="mt-8 rounded-xl border border-amber-300 bg-amber-50 p-5 text-slate-950">
         <p>If someone is in immediate danger, call <a className="font-semibold underline" href="tel:000">Triple Zero (000)</a> for police, fire or ambulance.</p>
       </div>
+      <section aria-labelledby="urgent-housing" className="mt-8 rounded-xl border border-slate-300 bg-white p-5">
+        <h2 id="urgent-housing" className="text-xl font-semibold text-slate-950">Need somewhere to stay tonight?</h2>
+        <p className="mt-2 leading-7 text-slate-700">
+          In NSW, call Link2home on <a className="font-semibold text-teal-800 underline" href="tel:1800152152">1800 152 152</a> for homelessness information and help with next steps.
+          The service can explain when it can make referrals. Ask about current options when you call.
+        </p>
+        <p className="mt-2 leading-7 text-slate-700">
+          <a className="text-teal-800 underline" href="https://www.nsw.gov.au/housing-and-construction/social-affordable/emergency-housing/homelessness">Check NSW Government contact and referral details</a>
+          {" · "}
+          <a className="text-teal-800 underline" href="https://askizzy.org.au/">Find housing support elsewhere in Australia through Ask Izzy</a>
+        </p>
+      </section>
       <section aria-labelledby="help-heading" className="mt-12">
         <h2 id="help-heading" className="text-2xl font-bold text-slate-950">What do you need help with?</h2>
         <HelpFinder />
