@@ -9,6 +9,13 @@ const assert = require('node:assert/strict');
     const browser = await engine.launch({ timeout: 15000 });
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, acceptDownloads: true });
     const page = await context.newPage();
+    async function checkAccessibility() {
+      const axe = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']);
+      // The app has no embedded frames. Use axe.run in Firefox because its
+      // multi-frame partial scan crashed the page on the Linux runner.
+      if (name === 'firefox') axe.setLegacyMode();
+      assert.deepEqual((await axe.analyze()).violations, []);
+    }
     const leaked = [];
     page.on('request', (request) => { if ((request.url() + (request.postData() || '')).includes('PRIVATE_SENTINEL')) leaked.push(request.url()); });
     await page.goto('http://localhost:3027');
@@ -45,13 +52,13 @@ const assert = require('node:assert/strict');
     assert.equal(await page.getByLabel('Next step or outcome').count(), 0);
     await add.click(); await page.getByRole('button', { name: 'Delete all notes' }).click();
     assert.equal(await add.evaluate((el) => el === document.activeElement), true);
-    assert.deepEqual((await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze()).violations, []);
+    await checkAccessibility();
     await page.goto('http://localhost:3027/transactions');
     const header = 'date,kind,amount,currency,recurring\n';
     await page.getByLabel('Choose CSV').setInputFiles({ name: 'synthetic.csv', mimeType: 'text/csv', buffer: Buffer.from(header + '2026-10-01,income,3000.00,AUD,no\n2026-10-02,expense,1200.00,AUD,yes') });
     await page.getByRole('heading', { name: 'Monthly cash flow' }).waitFor();
     assert.match(await page.locator('table').innerText(), /1,800.00/);
-    assert.deepEqual((await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze()).violations, []);
+    await checkAccessibility();
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
     await page.getByRole('button', { name: 'Delete imported figures' }).click();
     assert.equal(await page.locator('table').count(), 0);
