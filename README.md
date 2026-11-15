@@ -2,6 +2,8 @@
 
 Daybreak is an Australia-first financial wellbeing and community assistance project. The help page links to external assistance starting points. A browser-only budget tool compares user-entered monthly figures without storing or submitting them. Integrated service search, financial advice, accounts and AI are not implemented. See the [roadmap](docs/ROADMAP.md) and [engineering guidelines](guidlines.md).
 
+The [analyst package](analytics/README.md) supplies reproducible synthetic/public CSVs, a verified formula-based Excel artifact, SQL reconciliation and Tableau build instructions. Native Excel/Tableau validation remains open; the samples do not contain real user records or measured assistance outcomes.
+
 ## Local setup
 
 Prerequisites: Node.js 24, Python 3.12, and PostgreSQL. Create a local PostgreSQL database and role. The example below uses `daybreak` as both the local role and database and `daybreak` as a development-only password; never reuse these credentials outside a disposable local environment. PostgreSQL must already be running. With a local PostgreSQL administrator account, one way to provision these is:

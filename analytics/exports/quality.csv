@@ -1,0 +1,6 @@
+check,difference,expected
+income_SQL_minus_source_cents,0,0
+expense_SQL_minus_source_cents,0,0
+net_SQL_minus_source_cents,0,0
+missing_synthetic_months,0,0
+assistance_unreconciled_outcomes,0,0

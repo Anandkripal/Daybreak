@@ -1,0 +1,49 @@
+month,category,kind,cents,recurring,data_class
+2025-01-01,Take-home income,income,310000,0,synthetic
+2025-01-01,Housing,expense,120000,1,synthetic
+2025-01-01,Essentials,expense,61000,0,synthetic
+2025-01-01,Utilities,expense,25000,1,synthetic
+2025-02-01,Take-home income,income,320000,0,synthetic
+2025-02-01,Housing,expense,120000,1,synthetic
+2025-02-01,Essentials,expense,62000,0,synthetic
+2025-02-01,Utilities,expense,30000,1,synthetic
+2025-03-01,Take-home income,income,330000,0,synthetic
+2025-03-01,Housing,expense,120000,1,synthetic
+2025-03-01,Essentials,expense,63000,0,synthetic
+2025-03-01,Utilities,expense,20000,1,synthetic
+2025-04-01,Take-home income,income,340000,0,synthetic
+2025-04-01,Housing,expense,120000,1,synthetic
+2025-04-01,Essentials,expense,64000,0,synthetic
+2025-04-01,Utilities,expense,25000,1,synthetic
+2025-05-01,Take-home income,income,350000,0,synthetic
+2025-05-01,Housing,expense,120000,1,synthetic
+2025-05-01,Essentials,expense,65000,0,synthetic
+2025-05-01,Utilities,expense,30000,1,synthetic
+2025-06-01,Take-home income,income,360000,0,synthetic
+2025-06-01,Housing,expense,120000,1,synthetic
+2025-06-01,Essentials,expense,66000,0,synthetic
+2025-06-01,Utilities,expense,20000,1,synthetic
+2025-07-01,Take-home income,income,370000,0,synthetic
+2025-07-01,Housing,expense,120000,1,synthetic
+2025-07-01,Essentials,expense,67000,0,synthetic
+2025-07-01,Utilities,expense,25000,1,synthetic
+2025-08-01,Take-home income,income,380000,0,synthetic
+2025-08-01,Housing,expense,120000,1,synthetic
+2025-08-01,Essentials,expense,68000,0,synthetic
+2025-08-01,Utilities,expense,30000,1,synthetic
+2025-09-01,Take-home income,income,390000,0,synthetic
+2025-09-01,Housing,expense,120000,1,synthetic
+2025-09-01,Essentials,expense,69000,0,synthetic
+2025-09-01,Utilities,expense,20000,1,synthetic
+2025-10-01,Take-home income,income,400000,0,synthetic
+2025-10-01,Housing,expense,120000,1,synthetic
+2025-10-01,Essentials,expense,70000,0,synthetic
+2025-10-01,Utilities,expense,25000,1,synthetic
+2025-11-01,Take-home income,income,410000,0,synthetic
+2025-11-01,Housing,expense,120000,1,synthetic
+2025-11-01,Essentials,expense,71000,0,synthetic
+2025-11-01,Utilities,expense,30000,1,synthetic
+2025-12-01,Take-home income,income,420000,0,synthetic
+2025-12-01,Housing,expense,120000,1,synthetic
+2025-12-01,Essentials,expense,72000,0,synthetic
+2025-12-01,Utilities,expense,20000,1,synthetic
