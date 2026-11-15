@@ -12,6 +12,21 @@ const assert = require('node:assert/strict');
     const leaked = [];
     page.on('request', (request) => { if ((request.url() + (request.postData() || '')).includes('PRIVATE_SENTINEL')) leaked.push(request.url()); });
     await page.goto('http://localhost:3027');
+    await page.getByRole('heading', { name: 'Real help. One step at a time.' }).waitFor();
+    await page.getByText(/Evidence ID: food/).waitFor();
+    const food = page.getByRole('link', { name: 'Food and everyday essentials' });
+    assert.equal(await food.getAttribute('href'), 'https://askizzy.org.au/');
+    // Reduced CSS viewports approximate reflow space at 200% and 400% on a 1280px window.
+    for (const width of [640, 320]) {
+      await page.setViewportSize({ width, height: 844 });
+      for (const route of ['/', '/budget', '/transactions']) {
+        await page.goto(`http://localhost:3027${route}`);
+        assert.equal(await page.locator('main h1').count(), 1);
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${route} reflow at ${width}px`);
+      }
+    }
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('http://localhost:3027');
     const add = page.getByRole('button', { name: 'Add to my follow-up list' });
     await add.focus(); await page.keyboard.press('Enter');
     await page.getByLabel('Next step or outcome').fill('PRIVATE_SENTINEL');
