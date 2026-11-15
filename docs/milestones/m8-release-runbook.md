@@ -26,3 +26,5 @@ Deployment credentials, managed infrastructure, TLS termination and production a
 ## Local rehearsal
 
 The release rehearsal used a disposable UTF-8 PostgreSQL cluster bound to loopback, the production Next.js build and the API process. Web health, API readiness and all three public routes returned 200. Each public route sent the expected referrer, content-type and frame restrictions. Chromium passed the synthetic browser regression. Stopping PostgreSQL returned 503 from API readiness while the API liveness endpoint and public help page still returned 200. Restarting PostgreSQL restored readiness. A custom-format dump restored successfully into a separate empty database and contained the two expected synthetic seed rows. Switching production traffic to a previous build remains untested.
+
+The enhanced regression passed in Chromium and WebKit with source citation checks and 640px and 320px reflow checks on all three routes. These viewport widths approximate the available layout width at 200% and 400% on a 1280px window. Firefox could not launch because its profile folder was unavailable. Manual zoom and assistive-technology verification remain open.
