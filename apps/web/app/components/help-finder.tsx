@@ -1,6 +1,6 @@
 "use client";
 
-import { sourceFreshness } from "../../lib/journey";
+import { explainStartingPoint } from "../../lib/evidence";
 import { useState, useEffect } from "react";
 import { findStartingPoints, type Need, type Region } from "../../lib/finder";
 
@@ -33,11 +33,22 @@ export function HelpFinder() {
       <p className="text-slate-700">{results.length === 0 ? "No matching starting points in this small list." : `${results.length} starting ${results.length === 1 ? "point" : "points"} shown.`}</p>
       {results.length === 0 && <p className="mt-2 text-slate-700">Try another need or visit <a className="underline" href="https://askizzy.org.au/">Ask Izzy</a> to search for support across Australia. You can check other states’ government websites for local rebates.</p>}
       <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-        {results.map((link) => <li key={link.id} className="rounded-xl border border-slate-300 bg-white p-6">
-          <h3 className="text-xl font-semibold text-slate-950"><a href={link.url} className="underline decoration-teal-700 underline-offset-4">{link.title}</a></h3>
-          <p className="mt-3 leading-7 text-slate-700">{today && sourceFreshness(link.checked, today) === "recent" ? link.description : "Check the official source for current details. This link needs a freshness review."}</p>
-          <p className="mt-4 text-sm text-slate-600">{link.source} · {link.scope} · Link checked {link.checked}</p>
-        </li>)}
+        {results.map((link) => {
+          const explanation = explainStartingPoint(link.id, today);
+          return (
+            <li key={link.id} className="rounded-xl border border-slate-300 bg-white p-6">
+              <h3 className="text-xl font-semibold text-slate-950">
+                {explanation ? <a href={explanation.citation.url} className="underline decoration-teal-700 underline-offset-4">{link.title}</a> : link.title}
+              </h3>
+              <p className="mt-3 leading-7 text-slate-700">{explanation?.text ?? "No validated explanation is available."}</p>
+              {explanation && (
+                <p className="mt-4 text-sm text-slate-600">
+                  {link.source} · {link.scope} · Link checked {link.checked} · Evidence ID: {explanation.citation.evidenceId}
+                </p>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
     <noscript><p className="mt-4">The filters need JavaScript. You can use the starting points listed above without filtering.</p></noscript>

@@ -13,3 +13,5 @@ Tests cover draft uncertainty, export isolation and date boundaries. Manual brow
 Independent Astra source review identified impossible-date validation, removed-control focus recovery and session-retention wording; all three were corrected. Automated browser review remains pending.
 
 Browser follow-up: Chromium and WebKit automated synthetic journeys verified keyboard activation, deletion focus restoration, JSON export contents, deletion, no sentinel in requests, empty browser storage and zero axe violations. See the M3 CSV evidence for engine versions and Firefox environment failure. PR #18 API and web CI checks passed on 9ac2bea.
+
+The finder explains each result using its maintained source record. A citation must match both a registered ID and its exact source URL. Unknown IDs and mismatched URLs are rejected. Dates outside the review window suppress the descriptive explanation and prompt readers to confirm details at the source. The explanation runs locally and uses fixed copy and registry data; there is no model call, external text processing or eligibility assessment.
