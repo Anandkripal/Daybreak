@@ -10,7 +10,7 @@ Requirements and exit criteria are defined in [guidlines.md](../guidlines.md). S
 | M4 Assistance journey | In progress | Source-linked starting points under review; location, urgency, freshness and end-to-end acceptance remain outstanding |
 | M5 Tableau, Excel & reporting | Planned | M3 |
 | M6 Financial ML | Planned | M3 |
-| M7 Grounded AI & action workflows | Planned | M4, M6 |
+| M7 Grounded AI & action workflows | In progress | [Private contact workflow](milestones/m7-private-journey.md); independent UI review, AI and multilingual evaluation remain |
 | M8 Security, accessibility & deployment | Planned | Functional product flows |
 | M9 Pilot & portfolio | Planned | M8 |
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactJourney } from "./components/contact-journey";
 import { HelpFinder } from "./components/help-finder";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <p className="mt-3 leading-7 text-slate-700">Compare your monthly income and expenses with a possible change. Your entries stay in your browser.</p>
         <Link href="/budget" className="mt-4 inline-block font-semibold text-teal-800 underline">Open the budget tool</Link>
       </section>
+      <ContactJourney />
       <section aria-labelledby="next-heading" className="mt-12 border-t border-slate-300 pt-8">
         <h2 id="next-heading" className="text-2xl font-bold text-slate-950">Before you contact a service</h2>
         <p className="mt-3 leading-7 text-slate-700">You can ask what help is available, whether you need an appointment and if an interpreter is available. You don’t need to share financial documents with Daybreak to use these links.</p>
