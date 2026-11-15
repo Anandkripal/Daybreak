@@ -9,11 +9,10 @@ const assert = require('node:assert/strict');
     const browser = await engine.launch({ timeout: 15000 });
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, acceptDownloads: true });
     const page = await context.newPage();
+    const scanWithAxe = process.env.DAYBREAK_FUNCTIONAL_ONLY !== '1';
     async function checkAccessibility() {
+      if (!scanWithAxe) return;
       const axe = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']);
-      // The app has no embedded frames. Use axe.run in Firefox because its
-      // multi-frame partial scan crashed the page on the Linux runner.
-      if (name === 'firefox') axe.setLegacyMode();
       assert.deepEqual((await axe.analyze()).violations, []);
     }
     const leaked = [];
@@ -67,6 +66,6 @@ const assert = require('node:assert/strict');
     assert.equal(await page.locator('table').count(), 0);
     assert.deepEqual(await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length })), { local: 0, session: 0 });
     assert.deepEqual(leaked, []);
-    await browser.close(); console.log(`${name}: contact, keyboard focus, export/delete, CSV validation, mobile, axe and storage/network checks passed`);
+    await browser.close(); console.log(`${name}: contact, keyboard focus, export/delete, CSV validation, mobile and storage/network checks passed (axe: ${scanWithAxe ? 'passed' : 'not run'})`);
   }
 })().catch((error) => { console.error(error); process.exit(1); });

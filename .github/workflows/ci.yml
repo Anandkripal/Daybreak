@@ -71,6 +71,8 @@ jobs:
       - name: Verify private journeys in Firefox
         env:
           BROWSER: firefox
+          # Firefox crashes during axe evaluation on this runner. Chromium and WebKit cover axe locally.
+          DAYBREAK_FUNCTIONAL_ONLY: 1
         run: |
           node node_modules/next/dist/bin/next start --hostname localhost --port 3027 > "$RUNNER_TEMP/daybreak-web.log" 2>&1 &
           server_pid=$!
