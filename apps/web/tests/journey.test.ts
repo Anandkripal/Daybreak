@@ -12,8 +12,9 @@ describe("private contact preparation", () => {
   });
   it("requires review for stale, invalid and future checks", () => {
     const now = new Date("2026-11-14T00:00:00Z");
+    expect(sourceFreshness("2026-02-30", new Date("2026-03-03T00:00:00Z"))).toBe("review");
     expect(sourceFreshness("2026-11-14", now)).toBe("recent");
     expect(sourceFreshness("2026-10-15", now)).toBe("recent");
-    for (const date of ["2026-10-14", "2026-11-15", "bad"]) expect(sourceFreshness(date, now)).toBe("review");
+    for (const date of ["2026-10-14", "2026-11-15", "bad", "2026-02-30"]) expect(sourceFreshness(date, now)).toBe("review");
   });
 });
